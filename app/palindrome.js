@@ -15,8 +15,12 @@ const palindromeTest = (input) => {
   }
 }
 
-// export default palindromeTest;
+// Function for testing nyc output
+// const hello = () => {
+  // console.log("hello");
+// }
 
+// export default palindromeTest;
 module.exports = {
   palindromeTest: palindromeTest
 };
