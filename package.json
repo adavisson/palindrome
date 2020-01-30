@@ -7,13 +7,14 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha -r esm --reporter spec"
+    "test": "nyc mocha -r esm --reporter spec"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
     "esm": "^3.2.25",
-    "mocha": "^7.0.1"
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0"
   }
 }
