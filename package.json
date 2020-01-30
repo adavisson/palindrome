@@ -1,0 +1,19 @@
+{
+  "name": "tdd-palindrome",
+  "version": "1.0.0",
+  "description": "simple webpage to test if words are palindromes",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -r esm --reporter spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "esm": "^3.2.25",
+    "mocha": "^7.0.1"
+  }
+}
