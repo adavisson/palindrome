@@ -1,23 +1,25 @@
+// let palindromeTest = require ("./palindrome");
+
 document.addEventListener("DOMContentLoaded", function() {
   initialSetup();
 });
 
-const palindromeTest = (input) => {
-  const palWord = input.split("");
+// const palindromeTest = (input) => {
+//   const palWord = input.split("");
 
-  if (palWord.length <= 1){
-    return "Palindrome";
-  }
+//   if (palWord.length <= 1){
+//     return "Palindrome";
+//   }
 
-  const first = palWord.shift();
-  const last = palWord.pop();
+//   const first = palWord.shift();
+//   const last = palWord.pop();
 
-  if (first == last){
-    return palindromeTest(palWord.join(""));
-  } else {
-    return "Not a Palindrome";
-  }
-}
+//   if (first == last){
+//     return palindromeTest(palWord.join(""));
+//   } else {
+//     return "Not a Palindrome";
+//   }
+// }
 
 const initialSetup = () => {
   // Add event listener to form

@@ -20,7 +20,7 @@ const palindromeTest = (input) => {
   // console.log("hello");
 // }
 
-// export default palindromeTest;
+// exported for testing
 module.exports = {
   palindromeTest: palindromeTest
 };
