@@ -1,6 +1,7 @@
 let expect = require ("chai").expect;
 let palindromeTest = require("../app/palindrome");
 let longestWord = require("../app/longestWord");
+let modifyString = require("../app/modifyString");
 
 describe("Palindrome Test", function() {
   describe("returns 'Palindrome' when the word is a palindrome", function() {
@@ -49,3 +50,43 @@ describe("Longest Word Test", function(){
     expect(word3).to.equal("Henry");
   })
 });
+
+describe("Modify String Test", function(){
+  it("accepts a string, returns the string in reverse without vowels", function(){
+    let test1 = modifyString.modifyString("Hello World");
+    let test2 = modifyString.modifyString("foobar123");
+    let test3 = modifyString.modifyString("I like to riDe Bicycles");
+
+    expect(test1).to.equal("dlrW llH");
+    expect(test2).to.equal("321rbf");
+    expect(test3).to.equal("slcycB Dr t kl ");
+  })
+})
+
+describe("TestFunc", function(){
+  it("properly concatenates strings", function(){
+    let test1 = modifyString.testFunc();
+    let test2 = modifyString.testFunc({
+      status: true,
+      responseMessages: [
+        "This is a test",
+        "And you",
+        "passed"
+      ]
+    });
+    let test3 = modifyString.testFunc({
+      status: true,
+      responseMessages: [
+        "Test passed"
+      ]
+    });
+    let test4 = modifyString.testFunc({
+      status: false
+    });
+
+    expect(test1).to.equal("hello, timmy, bye.");
+    expect(test2).to.equal("This is a test, And you, passed.");
+    expect(test3).to.equal("Test passed.");
+    expect(test4).to.equal("failed");
+  })
+})
