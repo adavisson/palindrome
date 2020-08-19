@@ -2,6 +2,7 @@ let expect = require ("chai").expect;
 let palindromeTest = require("../app/palindrome");
 let longestWord = require("../app/longestWord");
 let modifyString = require("../app/modifyString");
+let sameNecklace = require("../app/sameNecklace");
 
 describe("Palindrome Test", function() {
   describe("returns 'Palindrome' when the word is a palindrome", function() {
@@ -88,5 +89,35 @@ describe("TestFunc", function(){
     expect(test2).to.equal("This is a test, And you, passed.");
     expect(test3).to.equal("Test passed.");
     expect(test4).to.equal("failed");
+  })
+})
+
+describe ("Same Necklace", function() {
+  it("properly identifies necklaces with the same letters in order", function(){
+    let test1 = sameNecklace.sameNecklace('Nicole', 'Nicole')
+    let test2 = sameNecklace.sameNecklace('andrew', 'andrew')
+    let test3 = sameNecklace.sameNecklace('abcdefg', 'abcdefg')
+
+    expect(test1).to.equal(true)
+    expect(test2).to.equal(true)
+    expect(test3).to.equal(true)
+  })
+  it("proplerly identifies necklaces with the same letters out of order", function(){
+    let test1 = sameNecklace.sameNecklace('Nicole', 'elociN')
+    let test2 = sameNecklace.sameNecklace('andrew', 'drewna')
+    let test3 = sameNecklace.sameNecklace('adfebx', 'debafx')
+
+    expect(test1).to.equal(true)
+    expect(test2).to.equal(true)
+    expect(test3).to.equal(true)
+  })
+  it("properly identifies when necklaces are not the same", function() {
+    let test1 = sameNecklace.sameNecklace('Nicole', 'Nikole')
+    let test2 = sameNecklace.sameNecklace('andrew', 'timmy')
+    let test3 = sameNecklace.sameNecklace('x', 'xx')
+
+    expect(test1).to.equal(false)
+    expect(test2).to.equal(false)
+    expect(test3).to.equal(false)
   })
 })
