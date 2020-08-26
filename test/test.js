@@ -3,6 +3,7 @@ let palindromeTest = require("../app/palindrome");
 let longestWord = require("../app/longestWord");
 let modifyString = require("../app/modifyString");
 let sameNecklace = require("../app/sameNecklace");
+let smorse = require("../app/smorse");
 
 describe("Palindrome Test", function() {
   describe("returns 'Palindrome' when the word is a palindrome", function() {
@@ -119,5 +120,21 @@ describe ("Same Necklace", function() {
     expect(test1).to.equal(false)
     expect(test2).to.equal(false)
     expect(test3).to.equal(false)
+  })
+})
+
+describe ("Smorse", function() {
+  it("translates a word into Morse Code dots and dashes", function() {
+    let test1 = smorse.smorse("sos")
+    let test2 = smorse.smorse("daily")
+    let test3 = smorse.smorse("programmer")
+    let test4 = smorse.smorse("bits")
+    let test5 = smorse.smorse("three")
+
+    expect(test1).to.equal("...---...")
+    expect(test2).to.equal("-...-...-..-.--")
+    expect(test3).to.equal(".--..-.-----..-..-----..-.")
+    expect(test4).to.equal("-.....-...")
+    expect(test5).to.equal("-.....-...")
   })
 })
